@@ -4136,14 +4136,14 @@ name = "settlement-worker"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "chrono",
  "common-utils",
  "dotenvy",
  "fred",
- "rust_decimal",
+ "hex",
  "serde",
  "serde_json",
  "settlement-client",
+ "solana-client",
  "solana-sdk",
  "tokio",
 ]

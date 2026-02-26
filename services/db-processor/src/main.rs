@@ -1,5 +1,5 @@
 use num_traits::ToPrimitive;
-use tokio_postgres::{ types::ToSql};
+use tokio_postgres::{NoTls, types::ToSql};
 use fred::prelude::*;
 use common_utils::MatchResult;
 use std::env;

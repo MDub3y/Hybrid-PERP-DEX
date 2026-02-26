@@ -88,7 +88,7 @@ fn test_signature_and_margin_health() {
     msg.extend_from_slice(&qty.to_le_bytes());
     msg.extend_from_slice(&timestamp.to_le_bytes());
     
-    let signature = engine_identity.sign(&msg).to_bytes();
+    // let signature = engine_identity.sign(&msg).to_bytes();
     let pubkey_bytes = engine_identity.pubkey().to_bytes();
 
     // 5. Construct Ed25519 Instruction Data
@@ -103,7 +103,7 @@ fn test_signature_and_margin_health() {
     instruction_data.extend_from_slice(&[u16::MAX, u16::MAX].map(|x| x.to_le_bytes()).concat());
     
     instruction_data.extend_from_slice(&pubkey_bytes); // offset 48
-    instruction_data.extend_from_slice(&signature);    // offset 112
+    // instruction_data.extend_from_slice(&signature);    // offset 112
     instruction_data.extend_from_slice(&msg);          // offset 176
 
     let verify_ix = Instruction {

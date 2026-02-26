@@ -12,4 +12,4 @@ rust_decimal = "1.36"
 num-traits = "0.2"
 anyhow = "1"
 dotenvy = "0.15"
-common-utils = { path = "../../libs/common-utils" }
+common-utils = { workspace = true }
