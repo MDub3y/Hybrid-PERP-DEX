@@ -1,0 +1,26 @@
+[workspace]
+members = [
+    "programs/perp-dex",
+    "services/api-router",
+    "services/matching-engine",
+    "services/db-processor",
+    "services/settlement-worker",
+    "libs/settlement-client",
+    "libs/common-utils"
+]
+resolver = "2"
+
+[workspace.dependencies]
+solana-program = "=1.18.26"
+solana-sdk = "=1.18.26"
+solana-client = "=1.18.26"
+anchor-lang = "0.30.1"
+anchor-client = "0.30.1"
+ed25519-dalek = "=1.0.1"
+curve25519-dalek = "=3.2.1"
+zeroize = "=1.3.0"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
